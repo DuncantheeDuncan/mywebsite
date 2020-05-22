@@ -1,11 +1,12 @@
- create projects class that will allow me to
- add project that i have done before, the one i am going to do
- and be able to update it in future delete
+- create projects class that will allow me to ~/done
+ - add project that i have done before ~/done
+ - the one i am going to do ~/done
+ - and be able to update it
+ - in future delete
 
- also be able to add it description/ title and further details.
+- also be able to add it description/ title ~/done
 
- isParagraphGreaterOrSmaller --> method check that description is less than expected.. the maximum if for front end restriction
- to display more the rest will be found on the repo Readme file if any exist..
+ isParagraphGreaterOrSmaller --> method check that description is less than expected.. the maximum it for front end restriction to display more the rest will be found on the repo Readme file if any exist..
 
+// TEST ALL EXCEPTIONS MAKE SURE THEY PASS.
 
- // TEST ALL EXCEPTIONS MAKE SURE THEY PASS.
