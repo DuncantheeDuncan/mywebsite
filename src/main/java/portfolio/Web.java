@@ -33,7 +33,7 @@ public class Web {
         Web wb = new Web();
         staticFiles.location("/public");
         getHerokuAssignedPort();
-        port(8080);
+        // port(8080);
 
         get("/",(req,res) ->{
 
