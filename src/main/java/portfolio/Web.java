@@ -31,9 +31,10 @@ public class Web {
     }
     public static void main(String[] args) {
         Web wb = new Web();
-        port(8080);
+        // port(8080);
         staticFiles.location("/public");
-        getHerokuAssignedPort();
+        // getHerokuAssignedPort();
+        port(getHerokuAssignedPort());
         
 
         get("/",(req,res) ->{
