@@ -11,7 +11,7 @@ import static spark.Spark.*;
 
 public class Web {
 
-    static int getHerokuAssignedPort() {
+    static int getHerokuAssignedPort() {// must check the port the problem might be here..
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
@@ -31,9 +31,10 @@ public class Web {
     }
     public static void main(String[] args) {
         Web wb = new Web();
+        port(8080);
         staticFiles.location("/public");
         getHerokuAssignedPort();
-        // port(8080);
+        
 
         get("/",(req,res) ->{
 
