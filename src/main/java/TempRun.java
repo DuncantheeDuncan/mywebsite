@@ -6,7 +6,11 @@ import portfolio.aboutme.works.ProjectProcessor;
 
 public class TempRun {
 
+/**
+to run the the app from terminal 
+and perfoming CRUDE
 
+*/
 
 
     public static void main(String[] args) throws CheckNumberException {
