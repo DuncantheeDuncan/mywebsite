@@ -36,6 +36,7 @@ public class Web {
             model.put("services", lp.service);
             model.put("work", lp.work);
             model.put("contact", lp.contact);
+            model.put("title",lp.title);
             model.put("readmore", lp.button);
             model.put("skills", lp.getSkills());
             // model.put("counter",mapp);
