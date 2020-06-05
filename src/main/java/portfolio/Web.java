@@ -33,7 +33,7 @@ public class Web {
 //            rendering
             model.put("menu",lp.menu);
             model.put("home",lp.home);
-            model.put("about",lp.about);
+            model.put("about",lp.aboutme);
             model.put("services",lp.services);
             model.put("work",lp.work);
             model.put("contact",lp.contact);
