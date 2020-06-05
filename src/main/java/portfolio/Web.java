@@ -39,7 +39,7 @@ public class Web {
             model.put("contact",lp.contact);
             model.put("readmore",lp.button);
             model.put("skills",lp.getSkills());
-            model.put("counter",mapp);
+            // model.put("counter",mapp);
 
             return new HandlebarsTemplateEngine()
                     .render(new ModelAndView(model,"index.handlebars"));
