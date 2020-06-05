@@ -15,7 +15,7 @@ public class LandingPage {
     public final String work = "Work";
     public final String contact = "Contact";
     public final String button = "Read More";
-    public final String title = "I, am, Phumlani, Mthembu";
+    public final String title = "I am Phumlani Mthembu";
     private List<String> skills = new ArrayList<>();
 
 
