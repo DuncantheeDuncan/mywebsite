@@ -33,7 +33,7 @@ public class Web {
             model.put("menu", lp.menu);
             model.put("home", lp.home);
             model.put("about", lp.about);
-            model.put("services", lp.service);
+            model.put("service", lp.service);
             model.put("work", lp.work);
             model.put("contact", lp.contact);
             model.put("title",lp.title);
