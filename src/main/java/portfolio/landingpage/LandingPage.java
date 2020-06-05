@@ -2,6 +2,7 @@ package portfolio.landingpage;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -22,7 +23,7 @@ public class LandingPage {
 
 
     if (!split.contains(",")){
-            return "Enter at least two skills";
+            return Collections.singletonList("Enter at least two skills");
         }else {
 
          String[] splitting = split.split(",");

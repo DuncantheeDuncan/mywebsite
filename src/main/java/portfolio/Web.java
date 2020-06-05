@@ -21,28 +21,27 @@ public class Web {
         port(getHerokuAssignedPort());
 
 
-        get("/",(req,res) ->{
+        get("/", (req, res) -> {
 
-            Map<String, Object>model = new HashMap<>();
+            Map<String, Object> model = new HashMap<>();
             Map<String, Object> mapp = new HashMap<>();
 
 
-
-            mapp.put("Number",wb.names());
+            mapp.put("Number", wb.names());
 
 //            rendering
-            model.put("menu",lp.menu);
-            model.put("home",lp.home);
-            model.put("about",lp.aboutme);
-            model.put("services",lp.services);
-            model.put("work",lp.work);
-            model.put("contact",lp.contact);
-            model.put("readmore",lp.button);
-            model.put("skills",lp.getSkills());
+            model.put("menu", lp.menu);
+            model.put("home", lp.home);
+            model.put("about", lp.about);
+            model.put("services", lp.service);
+            model.put("work", lp.work);
+            model.put("contact", lp.contact);
+            model.put("readmore", lp.button);
+            model.put("skills", lp.getSkills());
             // model.put("counter",mapp);
 
             return new HandlebarsTemplateEngine()
-                    .render(new ModelAndView(model,"index.handlebars"));
+                    .render(new ModelAndView(model, "index.handlebars"));
         });
     }
 
@@ -55,11 +54,11 @@ public class Web {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-    public String names(){//checking purposes
+    public String names() {//checking purposes
         Map<String, String> name = new HashMap<>();
-        for(int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
 
-            name.put("ID "+i,"number: ".concat(String.valueOf(i)));
+            name.put("ID " + i, "number: ".concat(String.valueOf(i)));
         }
         return String.valueOf(name);
     }
