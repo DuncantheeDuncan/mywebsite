@@ -8,7 +8,7 @@ public class TempRun {
 
 /**
 to run the the app from terminal 
-and perfoming CRUDE
+and performing CRUDE
 
 */
 

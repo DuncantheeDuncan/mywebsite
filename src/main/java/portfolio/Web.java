@@ -1,5 +1,6 @@
 package portfolio;
 
+import portfolio.landingpage.LandingPage;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -10,6 +11,41 @@ import static spark.Spark.*;
 
 
 public class Web {
+
+    public static void main(String[] args) {
+        Web wb = new Web();
+        LandingPage lp = new LandingPage();
+
+        // port(8080);
+        staticFiles.location("/public");
+        port(getHerokuAssignedPort());
+
+
+        get("/",(req,res) ->{
+
+            Map<String, Object>model = new HashMap<>();
+            Map<String, Object> mapp = new HashMap<>();
+
+
+
+            mapp.put("Number",wb.names());
+
+//            rendering
+            model.put("menu",lp.menu);
+            model.put("home",lp.home);
+            model.put("about",lp.about);
+            model.put("services",lp.services);
+            model.put("work",lp.work);
+            model.put("contact",lp.contact);
+            model.put("readmore",lp.button);
+            model.put("skills",lp.getSkills());
+            model.put("counter",mapp);
+
+            return new HandlebarsTemplateEngine()
+                    .render(new ModelAndView(model,"index.handlebars"));
+        });
+    }
+
 
     static int getHerokuAssignedPort() {// must check the port the problem might be here..
         ProcessBuilder processBuilder = new ProcessBuilder();
@@ -25,28 +61,8 @@ public class Web {
 
             name.put("ID "+i,"number: ".concat(String.valueOf(i)));
         }
-
-
         return String.valueOf(name);
     }
-    public static void main(String[] args) {
-        Web wb = new Web();
-        // port(8080);
-        staticFiles.location("/public");
-        // getHerokuAssignedPort();
-        port(getHerokuAssignedPort());
-        
 
-        get("/",(req,res) ->{
 
-            Map<String, Object>model = new HashMap<>();
-            Map<String, Object> mapp = new HashMap<>();
-
-            mapp.put("Number",wb.names());
-            model.put("counter",mapp);
-
-            return new HandlebarsTemplateEngine()
-                    .render(new ModelAndView(model,"index.handlebars"));
-        });
-    }
 }
