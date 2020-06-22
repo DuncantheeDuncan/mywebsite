@@ -1,7 +1,7 @@
 import exceptions.CheckNumberException;
 import portfolio.Mapping;
 import portfolio.aboutme.works.ProjectProcessor;
-
+import portfolio.landingpage.LandingPage;
 
 
 public class TempRun {
@@ -17,7 +17,9 @@ and performing CRUDE
 
         Mapping mapping = new Mapping();
 
+        LandingPage landingPage = new LandingPage();
 
+        System.out.println("SKills\n"+landingPage.splitToArray("Web Developer,Web Designer,Front end Developer"));
 
             new ProjectProcessor().projects(
                     "first project",

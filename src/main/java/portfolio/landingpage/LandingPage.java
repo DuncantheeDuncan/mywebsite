@@ -21,7 +21,6 @@ public class LandingPage {
 
     public List<String> splitToArray(String split) {
 
-
     if (!split.contains(",")){
             return Collections.singletonList("Enter at least two skills");
         }else {
@@ -31,11 +30,6 @@ public class LandingPage {
          skills.add(S.trim());
 
         }
-        //FIXME-/- hard cording just for Temp.
-
-        skills.add("Web Developer,");
-        skills.add("Web Designer,");
-        skills.add("Front end Developer");
 
         return skills;
         }

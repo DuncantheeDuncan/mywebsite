@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -39,7 +40,7 @@ public class LandingPageTests {
         LandingPage lp = new LandingPage();
 
         String skills = "Accounting , Doctor, Internal Audit";
-//        ActualMessage = lp.addSkills(skills);
+        ActualMessage = String.valueOf(lp.splitToArray(skills));
 
         List<String> ExpectedMessage;
         ExpectedMessage= new ArrayList<>();
@@ -47,13 +48,14 @@ public class LandingPageTests {
         ExpectedMessage.add("Doctor");
         ExpectedMessage.add("Internal Audit");
 
-//        assertEquals(ExpectedMessage.toString(),ActualMessage);
+        assertEquals(ExpectedMessage.toString(),ActualMessage);
 
         // must return an error message
         skills = "accountant Teacher";
 
-//        ActualMessage = lp.addSkills(skills);
-        this.ExpectedMessage = "Enter at least two skills";
-//        assertEquals(this.ExpectedMessage,ActualMessage);
+        ActualMessage = String.valueOf(lp.splitToArray(skills));
+        ExpectedMessage = Collections.singletonList("Enter at least two skills");
+
+        assertEquals(ExpectedMessage.toString(),ActualMessage);
     }
 }

@@ -16,6 +16,10 @@ public class Web {
         Web wb = new Web();
         LandingPage lp = new LandingPage();
 
+
+
+
+
         // port(8080);
         staticFiles.location("/public");
         port(getHerokuAssignedPort());
@@ -38,13 +42,17 @@ public class Web {
             model.put("contact", lp.contact);
             model.put("title",lp.title);
             model.put("readmore", lp.button);
+
+            lp.splitToArray("Web Developer,Web Designer,Front end Developer");//FIXME// fix hard coding!!
             model.put("skills", lp.getSkills());
-            // model.put("counter",mapp);
+
 
             return new HandlebarsTemplateEngine()
                     .render(new ModelAndView(model, "index.handlebars"));
         });
     }
+
+
 
 
     static int getHerokuAssignedPort() {// must check the port the problem might be here..
@@ -55,7 +63,7 @@ public class Web {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
-    public String names() {//checking purposes
+    public String names() {//checking
         Map<String, String> name = new HashMap<>();
         for (int i = 0; i < 10; i++) {
 
