@@ -2,6 +2,7 @@ package portfolio.landingpage;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -26,10 +27,7 @@ public class LandingPage {
         }else {
 
          String[] splitting = split.split(",");
-         for (String S : splitting){
-         skills.add(S.trim());
-
-        }
+        skills.addAll(Arrays.asList(splitting));
 
         return skills;
         }

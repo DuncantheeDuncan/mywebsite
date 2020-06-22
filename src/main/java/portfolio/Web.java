@@ -16,10 +16,6 @@ public class Web {
         Web wb = new Web();
         LandingPage lp = new LandingPage();
 
-
-
-
-
         // port(8080);
         staticFiles.location("/public");
         port(getHerokuAssignedPort());
