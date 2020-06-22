@@ -40,7 +40,7 @@ public class Web {
             model.put("readmore", lp.button);
 
             lp.splitToArray("Web Developer, Web Designer, Front end Developer");//FIXME// fix hard coding!!
-            model.put("skills", lp.getSkills());
+            model.put("skills", lp.getSkills().toString());
 
 
             return new HandlebarsTemplateEngine()
