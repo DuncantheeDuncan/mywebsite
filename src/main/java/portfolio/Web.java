@@ -47,7 +47,8 @@ public class Web {
                     .render(new ModelAndView(model, "index.handlebars"));
         });
         //Stopping the sever
-        stop();
+        // stopping it here will results in 404 page not found
+//        stop();
     }
 
 
