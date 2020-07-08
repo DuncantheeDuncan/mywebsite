@@ -16,7 +16,7 @@ public class Web {
         Web wb = new Web();
         LandingPage lp = new LandingPage();
 
-        // port(8080);
+//         port(8080);
         staticFiles.location("/public");
         port(getHerokuAssignedPort());
 
@@ -40,12 +40,14 @@ public class Web {
             model.put("readmore", lp.button);
 
             lp.splitToArray("Web Developer, Web Designer, Front end Developer");//FIXME// fix hard coding!!
-            model.put("skills", lp.getSkills().toString());
+            model.put("skills", lp.getSkills());
 
 
             return new HandlebarsTemplateEngine()
                     .render(new ModelAndView(model, "index.handlebars"));
         });
+        //Stopping the sever
+        stop();
     }
 
 

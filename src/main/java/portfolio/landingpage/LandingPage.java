@@ -17,25 +17,29 @@ public class LandingPage {
     public final String contact = "Contact";
     public final String button = "Read More";
     public final String title = "I am Phumlani Mthembu";
-    private List<String> skills = new ArrayList<>();
+    private String skills ="";
 
 
-    public List<String> splitToArray(String split) {
+    public String splitToArray(String splitSkills) {
 
-    if (!split.contains(",")){
-            return Collections.singletonList("Enter at least two skills");
+    if (!splitSkills.contains(",")){
+            return "Enter at least two skills";
         }else {
 
-         String[] splitting = split.split(",");
-        skills.addAll(Arrays.asList(splitting));
+         String[] splitting = splitSkills.split(",");
 
-        return skills;
+         for (String S: splitting){
+
+             skills += S.trim() +",";
+         }
+
+        return skills.substring(0, skills.length() -1);
         }
     }
 
 
 
-    public List<String> getSkills() {
+    public String getSkills() {
       return skills;
     }
 
