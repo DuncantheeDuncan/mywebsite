@@ -1,4 +1,4 @@
-package portfolio.aboutme.works;
+package portfolio.works;
 
 import exceptions.CheckNumberException;
 

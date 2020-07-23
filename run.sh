@@ -10,4 +10,4 @@ echo 'your App is running now'
 
 
 
-#java $JAVA_OPTS -cp target/classes:target/dependency/* portfolio.Web
+#java $JAVA_OPTS -cp target/classes:target/dependency/* portfolio.runweb.Web
